@@ -6,6 +6,15 @@
     //enginering
     //keterangann
 
+?>
+
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
     $query = "SELECT * FROM report LIMIT 1, 20;";
     $result = mysqli_query($conn, $query);  
 

@@ -1,6 +1,15 @@
 <?php
 require_once __DIR__ . "/koneksi.php";
 
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<?php
+
 $dataArray = [];
 $sql = "SELECT * FROM user LIMIT 20";
 $result = $conn->query($sql);

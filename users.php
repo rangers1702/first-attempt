@@ -4,6 +4,12 @@
 // Include database connection
 include('koneksi.php');
 
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 // Fetch users from the database
 $query = "SELECT * FROM user";
 $result = mysqli_query($conn, $query);
