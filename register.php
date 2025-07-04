@@ -44,10 +44,29 @@ if (isset($_POST['submit'])) {
         <p class="error"><?= $message; ?></p>
     <?php endif; ?>
 
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required><br>
-        <input type="password" name="password" placeholder="Password" required><br>
-        <button type="submit" name="submit">Daftar</button>
+     <form method="post">
+        <label>Name:</label><br>
+        <input type="text" name="nama" required><br><br>
+        <label>No WA:</label><br>
+        <input type="text" name="nomor_wa"><br><br>
+        <label>Telegram ID:</label><br>
+        <input type="text" name="telegram_id"><br><br>
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+        <label>Divisi:</label><br>
+        <input type="number" name="divisi"><br><br>
+        <label>Store:</label><br>
+        <input type="number" name="store"><br><br>
+        <label>Status:</label><br>
+        <input type="number" name="status"><br><br>
+        <label>Tanggal:</label><br>
+        <input type="date" name="tanggal"><br><br>
+        <label>Visible:</label><br>
+        <input type="number" name="visible"><br><br>
+        <br>
+        <input type="submit" name="submit" value="Daftar akun">
     </form>
 
     <p style="text-align:center;">Sudah punya akun? <a href="login.php">Login</a></p>
