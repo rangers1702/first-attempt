@@ -15,11 +15,7 @@
 <html>
 <head>
     <title>Data Laporan</title>
-    <style>
-        table { border-collapse: collapse; width: 50%; margin: 20px auto; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-        th { background-color: #f4f4f4; }
-    </style>
+    <link rel="stylesheet" href="assets/css/styleDivisi.css">
 </head>
 <body>
     <h2 style="text-align:center;">Data Report</h2>
