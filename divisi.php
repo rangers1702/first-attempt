@@ -6,7 +6,7 @@
     //enginering
     //keterangann
 
-    $query = "SELECT * FROM report";
+    $query = "SELECT * FROM report LIMIT 1, 20;";
     $result = mysqli_query($conn, $query);  
 
 ?>
