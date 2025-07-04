@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once __DIR__ . "/koneksi.php";
 
 $dataArray = [];
@@ -50,4 +50,4 @@ while ($row = $result->fetch_assoc()) {
     </table>
 </body>
 
-</html> -->
+</html>
