@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once __DIR__ . "/koneksi.php";
 
 $sql = "SELECT * FROM report_barang";
@@ -37,4 +37,4 @@ $result->fetch_all(MYSQLI_ASSOC);
     </table>
 </body>
 
-</html>
+</html> -->
