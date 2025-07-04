@@ -46,5 +46,6 @@ if (isset($_POST['submit'])) {
         <input type="password" name="password" required><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
+    <a href="register.php">Daftar akun?</a>
 </body>
 </html>

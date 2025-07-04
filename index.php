@@ -31,6 +31,9 @@ while ($row = $result->fetch_assoc()) {
     <nav>
         <a href="users.php">Danang's Page</a> |
         <a href="divisi.php">Salis's Page</a>
+        <a href="logout.php">
+            logout
+        </a>
     </nav>
 
     <hr>

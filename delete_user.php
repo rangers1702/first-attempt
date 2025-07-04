@@ -4,6 +4,12 @@
 // Include database connection
 include('koneksi.php');
 
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 // Cek apakah parameter id dikirim
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']); // Pastikan id berupa integer

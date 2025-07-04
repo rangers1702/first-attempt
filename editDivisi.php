@@ -1,6 +1,12 @@
 <?php
 require 'koneksi.php';
 
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 // Ambil data berdasarkan ID
 $id = $_GET['id'];
 $query = "SELECT * FROM report WHERE id = $id";

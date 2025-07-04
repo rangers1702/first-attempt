@@ -10,6 +10,12 @@ if (!isset($_GET['id'])) {
     exit();
 }
 
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 $id = intval($_GET['id']);
 
 // Jika form disubmit

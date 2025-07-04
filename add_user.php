@@ -4,6 +4,12 @@
 // Include database connection
 include('koneksi.php');
 
+// session_start();
+// if (!isset($_SESSION['login'])) {
+//     header("Location: login.php");
+//     exit;
+// }
+
 // Cek apakah form disubmit
 if (isset($_POST['submit'])) {
     $nama = mysqli_real_escape_string($conn, $_POST['nama']);
