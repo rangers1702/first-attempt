@@ -1,12 +1,12 @@
 <!-- <?php
 require_once __DIR__ . "/koneksi.php";
 
-$sql = "SELECT * FROM report_barang";
-$result = $mysqli->query($sql);
-
-$result->fetch_all(MYSQLI_ASSOC);
-
-// var_dump($query);
+$dataArray = [];
+$sql = "SELECT * FROM user LIMIT 20";
+$result = $conn->query($sql);
+while ($row = $result->fetch_assoc()) {
+    $dataArray[] = $row;
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,11 +15,18 @@ $result->fetch_all(MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>INDEX</title>
 </head>
 
 <body>
-    <h1>Data Users</h1>
+    <nav>
+        <a href="users.php">Danang's Page</a> |
+        <a href="divisi.php">Salis's Page</a>
+    </nav>
+
+    <hr>
+
+    <h1>Index Pokok</h1>
     <table>
         <thead>
             <th>Name</th>
@@ -27,12 +34,18 @@ $result->fetch_all(MYSQLI_ASSOC);
             <th>action</th>
         </thead>
         <tbody>
-            <td>xxx</td>
-            <td>xxx</td>
-            <td>
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-            </td>
+            <?php
+            foreach ($dataArray as $data) { ?>
+                <tr>
+                    <td><?= $data['nama']  ?></td>
+                    <td><?= $data['nomor_wa']  ?></td>
+                    <td>
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+            <?php } ?>
+
         </tbody>
     </table>
 </body>
